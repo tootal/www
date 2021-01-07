@@ -22,52 +22,50 @@
 <h1 class="title">头头世界</h1>
 <p class="subtitle">欢迎来到头头世界！</p>
 
-<!-- ancestor tile begin -->
+<!-- 主要部分开始 -->
 <div class="tile is-ancestor">
-<div class="tile is-parent is-vertical">
-
-<!-- 上半部分开始 -->
-<div class="tile">
 <!-- 左侧部分开始 -->
-<div class="tile is-8 is-parent is-vertical">
+<div class="tile is-8 is-vertical">
     <!-- 左上开始 -->
-    <a class="tile is-child notification is-primary is-light" href="https://blog.tootal.xyz">
-        <p class="title">头头博客</p>
-        <p class="subtitle">在时光的流逝中，逐渐成为更好的自己。</p>
-        <p class="content">
-            让自己成为一个持续学习和思考的人，并只写真正思考和总结之后的产物，其他一切就会随之而来。 <br>
-            无论你面临什么困惑，总会有很多人同样面临过，于是你苦苦思索之后的结果，肯定会对很多人有意义。<br>
-            最近更新：<span id="tootal-blog-update-time"></span>
-        </p>
-    </a>
+    <div class="tile is-parent">
+        <a class="tile is-child notification is-primary is-light" href="https://blog.tootal.xyz">
+            <p class="title">头头博客</p>
+            <p class="subtitle">在时光的流逝中，逐渐成为更好的自己。</p>
+            <p class="content">
+                让自己成为一个持续学习和思考的人，并只写真正思考和总结之后的产物，其他一切就会随之而来。 <br>
+                无论你面临什么困惑，总会有很多人同样面临过，于是你苦苦思索之后的结果，肯定会对很多人有意义。<br>
+                <span id="tootal-blog-update-time"></span>
+            </p>
+        </a>
+    </div>
     <!-- 左上结束 -->
     <!-- 左下开始 -->
     <div class="tile">
-        <div class="tile is-6 is-parent is-vertical pl-0 py-0">
+        <div class="tile is-parent is-vertical">
             <a class="tile is-child notification is-warning is-light" href="https://note.tootal.xyz">
                 <p class="title">头头笔记</p>
                 <p class="subtitle">我们若能更妥善地搜寻资料，实在已经改变世界。</p>
-                <p class="content">最近更新：<span id="tootal-note-update-time"></span></p>
+                <p class="content"><span id="tootal-note-update-time"></span></p>
             </a>
             <a class="tile is-child notification is-success is-light" href="http://mall.tootal.xyz">
                 <p class="title">头头商城</p>
                 <p class="subtitle">基于Servlet与JSP技术的电子商务网站的开发与部署。</p>
-                <p class="content">最近更新：<span id="tootal-mall-update-time"></span></p>
+                <p class="content"><span id="tootal-mall-update-time"></span></p>
             </a>
         </div>
-        <div class="tile is-6 is-parent is-vertical pr-0 py-0">
+        <div class="tile is-parent is-vertical">
             <a class="tile is-child notification is-info is-light" href="https://tootal.github.io/DBLParse">
                 <p class="title">科学文献管理系统</p>
                 <p class="content">
                     DBLParse是基于DBLP大数据，利用Web和Qt建立的一套高效率的文献查询与分析系统。 <br>
-                    最近更新：<span id="tootal-DBLParse-update-time"></span>
+                    <span id="tootal-DBLParse-update-time"></span>
                 </p>
             </a>
             <a class="tile is-child notification is-link is-light" href="https://gan.tootal.xyz">
                 <p class="title">章又贡</p>
                 <p class="content">
                     “章又贡”是赣字的拆解，网站主要用于介绍我的家乡“赣州”，开发此网站的目的是在实践中学习Web技术。<br>
-                    最近更新：<span id="tootal-gan-update-time"></span>
+                    <span id="tootal-gan-update-time"></span>
                 </p>
             </a>
         </div>
@@ -86,7 +84,8 @@
     头头世界是一个个人网站，最初搭建于2018年12月。域名为<a href="https://tootal.xyz">tootal.xyz</a>，
     目前托管于<a href="https://console.cloud.tencent.com/tcb/hosting/index">腾讯云静态网站</a>上。 <br>
     联系邮箱：<a href="mailto:tootal@yeah.net">tootal@yeah.net</a>。 <br>
-    本页面最后更新时间：<span id="tootal-world-update-time"></span>
+    <button class="button" id="delete-cache-btn">清除缓存并刷新</button> <br>
+    <span id="tootal-world-update-time"></span>
 </div>
 </div>
 </article>
@@ -120,26 +119,25 @@
 <!-- 声明部分结束 -->
 </div>
 <!-- 右侧部分结束 -->
-
 </div>
-<!-- 上半部分结束 -->
+<!-- 主要部分结束 -->
 
-<!-- 下半部分评论开始 -->
-<article class="tile is-child p-3">
-    <div class="message is-light">
-        <div class="message-header">
-            <p>评论</p>
+<!-- 评论部分开始 -->
+<div class="tile is-ancestor">
+<div class="tile is-parent">
+    <article class="tile is-child">
+        <div class="message is-light">
+            <div class="message-header">
+                <p>评论</p>
+            </div>
+            <div class="message-body">
+                <div id="tcomment"></div>
+            </div>
         </div>
-        <div class="message-body">
-            <div id="tcomment"></div>
-        </div>
-    </div>
-</article>
-
-<!-- 下半部分评论结束 -->
+    </article>
 </div>
 </div>
-<!-- ancestor tile end -->
+<!-- 评论部分结束 -->
 
 </div>
 <!-- container end -->

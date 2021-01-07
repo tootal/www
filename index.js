@@ -53,11 +53,15 @@ async function getUpdateTime(user, repo) {
     let url = `https://api.github.com/repos/${user}/${repo}/commits?page=0&per_page=1`;
     try {
         let r = await fetch(url);
+        if (!r.ok) {
+            console.log(`Get ${user}/${repo} failed!`);
+            return ;
+        }
         let json = await r.json();
         let a = document.getElementById(`${user}-${repo}-update-time`);
-        a.innerText = timeAge(json[0]['commit']['author']['date']);
+        a.innerText = '最后更新时间：' + timeAge(json[0]['commit']['author']['date']);
     } catch (e) {
-        console.log(`Request ${url} Failed`, e);
+        console.log('catch ', e);
     }
 }
 const repos = ['blog', 'note', 'world', 'mall', 'DBLParse', 'gan']
@@ -76,3 +80,8 @@ if('serviceWorker' in navigator) {
              .register('/sw.js')
              .then(function() { console.log('Service Worker Registered'); });
 }
+
+document.getElementById('delete-cache-btn').addEventListener('click', async function(e) {
+    await caches.delete('tootal-store');
+    location.reload();
+})
