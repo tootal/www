@@ -1,0 +1,26 @@
+{
+    "background_color": "purple",
+    "description": "头头世界，个人网站。",
+    "display": "fullscreen",
+    "icons": [
+        {
+          "src": "img/favicon96.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        },
+        {
+          "src": "img/favicon144.png",
+          "sizes": "144x144",
+          "type": "image/png"
+        },
+        {
+          "src": "img/favicon192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+    ],
+    "name": "头头世界",
+    "short_name": "头头世界",
+    "start_url": "/index.html"
+  }
+  
