@@ -13,6 +13,6 @@ jobs:
       - name: Deploy static to Tencent CloudBase
         shell: bash
         run: |
-          npm i -g @cloudbase/cli
+          sudo npm i -g @cloudbase/cli
           tcb login --apiKeyId ${{ secrets.SECRET_ID }} --apiKey ${{ secrets.SECRET_KEY }}
           tcb hosting deploy index.html -e ${{ secrets.ENV_ID }} -r ap-guangzhou
