@@ -64,7 +64,7 @@ async function getUpdateTime(user, repo) {
         console.log('catch ', e);
     }
 }
-const repos = ['blog', 'note', 'world', 'mall', 'DBLParse', 'gan']
+const repos = ['blog', 'note', 'www', 'mall', 'DBLParse', 'gan']
 for (let r of repos) getUpdateTime('tootal', r);
 twikoo.init({
     envId: 'tootal-6g2y019v6b37e4be',
