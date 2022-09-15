@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        if (params.has('cmd')) {
+            eval(params.get('cmd'));
+        }
+    </script>
+</body>
+
+</html>
